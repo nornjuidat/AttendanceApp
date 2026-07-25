@@ -1,42 +1,26 @@
 {
   "expo": {
-    "name": "AttendanceApp",
-    "slug": "AttendanceApp",
+    "name": "Attendance Clock",
+    "slug": "attendance-clock",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "attendanceapp",
-    "userInterfaceStyle": "automatic",
-    "ios": {
-      "icon": "./assets/expo.icon"
-    },
-    "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
-      },
-      "predictiveBackGestureEnabled": false
-    },
-    "web": {
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
-    },
+    "scheme": "attendanceclock",
+    "userInterfaceStyle": "light",
     "plugins": [
       "expo-router",
       [
-        "expo-splash-screen",
+        "expo-image-picker",
         {
-          "backgroundColor": "#208AEF",
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 76
+          "photosPermission": "האפליקציה צריכה גישה לגלריה כדי לבחור תמונת פרופיל.",
+          "cameraPermission": "האפליקציה צריכה גישה למצלמה כדי לצלם תמונת פרופיל."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "האפליקציה צריכה גישה למיקום בזמן החתמת נוכחות."
         }
       ]
-    ],
-    "experiments": {
-      "typedRoutes": true,
-      "reactCompiler": true
-    }
+    ]
   }
 }
